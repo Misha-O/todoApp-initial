@@ -1,0 +1,200 @@
+@import url("./normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  background: #dbd9d9;
+}
+
+.app--features {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.app--features--list {
+  /* display: none; */
+  opacity: 0.4;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+.app--features:hover + .app--features--list {
+  display: block;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.container {
+  width: 600px;
+  min-height: 600px;
+  margin: 80px 20px;
+  flex: 2;
+}
+
+/* drop zone styles */
+.drop--container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop--zone {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed grey;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 15%;
+  color: grey;
+}
+.drop--zone:hover {
+  border: 1px dashed red;
+  font-size: 18px;
+}
+/* drop zone styles end */
+form {
+  text-align: center;
+}
+.header {
+  text-align: center;
+}
+
+.input__block {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input__block label {
+  font-size: 24px;
+}
+
+.input__block input {
+  margin-left: 15px;
+}
+.task__list {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.task__item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  margin: 10px 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #3acca0;
+  border-radius: 10px;
+  position: relative;
+}
+.instruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+}
+.buttons {
+  width: 55%;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  background: rgb(96, 206, 129);
+}
+
+.btn:hover {
+  opacity: 0.8;
+  background: rgb(111, 230, 214);
+}
+
+.editter {
+  width: 160px;
+  margin-left: 30px;
+}
+
+.clear {
+  width: 210px;
+  font-size: 14px;
+  height: 30px;
+  line-height: 8px;
+  background: grey;
+}
+/* font awesome */
+.icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.remove:hover {
+  background: rgb(235, 45, 45);
+}
+
+.check:hover {
+  background: lime;
+}
+
+.edit:hover {
+  background: rgb(114, 110, 110);
+}
+
+/* completed task*/
+.completed {
+  opacity: 0.5;
+  background-color: #dbd9d9;
+}
+.completed:before,
+.completed:after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 2px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #000;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
+/* drag */
+.dragged {
+  opacity: 0.5;
+  background-color: #80beab;
+  font-size: 16px;
+}

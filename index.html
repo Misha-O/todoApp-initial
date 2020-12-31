@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/95bb6ffd85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <h4 class="app--features">App features:</h4>
+    <ul class="app--features--list">
+      <li>Add todos by typing into input field</li>
+      <li>
+        Edit todo by clicking "pencil icon", content will appear in the input
+        field, after editting, click edit task button once again to confirm
+      </li>
+      <li>sort lists by choosing all or only completed</li>
+      <li>
+        use delete/edit/complete feature directly on your todo, using respective
+        icons
+      </li>
+      <li>
+        by clicking delete bin icon it only removes todo from display, but it
+        still remains within memory
+      </li>
+      <li>
+        there is also an option to use dropzone to your right to remove
+        respective todo
+      </li>
+      <li>
+        to completely erase all todos from memory click "Erase tasks from
+        memory" button at the bottom
+      </li>
+      <li>to mark todo as complete, click "checkmark" icon</li>
+      <li>
+        you can change the order of todos by simply dragging and dropping
+        respective todo, also you can shuffle it between "All Your Tasks" list
+        and "Your Completed Tasks"
+      </li>
+    </ul>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="header">Your todo list</h2>
+        <form id="form">
+          <label for="todo">Type your task:</label>
+          <input
+            type="text"
+            name="todo"
+            id="todo"
+            placeholder="Type your todo ..."
+          />
+          <label for="filter"></label>
+          <select name="filter" id="drop-filter">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+          </select>
+          <div class="input__block">
+            <div class="buttons">
+              <button class="btn add" id="addBtn">Add</button>
+              <button class="btn editter" id="editBtn">Edit task</button>
+            </div>
+          </div>
+        </form>
+        <ul class="task__list" id="task-list">
+          All Your Tasks:
+        </ul>
+        <ul class="task__list" id="task-list-completed">
+          Your Completed Tasks:
+        </ul>
+        <button class="btn clear" id="clearBtn">Erase Tasks From Memory</button>
+      </div>
+      <div class="container drop--container" id="drop-container">
+        <div class="drop--zone" id="drop-zone">Drop here to remove</div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
